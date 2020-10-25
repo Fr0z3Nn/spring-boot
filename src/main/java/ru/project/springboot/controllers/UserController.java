@@ -15,6 +15,7 @@ import ru.project.springboot.services.UserService;
 public class UserController {
 
     private final UserService userService;
+    private final UserMapper userMapper;
 
     @GetMapping("/user")
     public String showUsers() {
@@ -24,6 +25,6 @@ public class UserController {
     @GetMapping("/users/{id}")
     public UserDTO showUser(@PathVariable Long id) {
         User user = userService.getUser(id);
-        return UserMapper.INSTANCE.toDTO(user);
+        return userMapper.toDTO(user);
     }
 }
