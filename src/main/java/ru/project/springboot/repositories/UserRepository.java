@@ -8,4 +8,5 @@ import ru.project.springboot.models.User;
 @Repository
                                                     // таблица  тип ид
 public interface UserRepository extends CrudRepository<User, Long> {
+    User getById(Long id);
 }
