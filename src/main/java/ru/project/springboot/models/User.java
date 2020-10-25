@@ -8,7 +8,7 @@ import java.util.Set;
 
 @Getter @Setter
 @NoArgsConstructor @AllArgsConstructor
-@Entity
+@Entity @Builder
 @EqualsAndHashCode(of = "email")
 @Table(name = "Users")
 
