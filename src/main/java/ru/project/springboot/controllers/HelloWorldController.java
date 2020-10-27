@@ -1,7 +1,6 @@
 package ru.project.springboot.controllers;
 
 import lombok.RequiredArgsConstructor;
-import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +22,7 @@ public class HelloWorldController {
     @GetMapping("/hello")
     public String hello(Model model) {
         createUsersList(model);
-        return "start";
+        return "blog";
     }
 
     @PostMapping("/hello")

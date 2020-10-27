@@ -18,9 +18,10 @@ public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+    private String nickname;
     private String email;
     private String password;
-
+    private String dateOfRegistration;
     // ARTICLES
     @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
 

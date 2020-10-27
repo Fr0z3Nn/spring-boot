@@ -16,4 +16,10 @@ public class ArticleServiceImpl implements ArticleService{
     public List<Article> getAllArticles() {
         return (List<Article>) articleRepository.findAll();
     }
+
+    @Override
+    public Article getArticleById(Long id) {
+        return articleRepository.getById(id);
+    }
+
 }
