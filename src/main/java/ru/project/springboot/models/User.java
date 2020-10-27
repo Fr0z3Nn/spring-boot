@@ -3,7 +3,9 @@ package ru.project.springboot.models;
 import lombok.*;
 
 import javax.persistence.*;
+import java.util.ArrayList;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter @Setter
@@ -19,6 +21,22 @@ public class User {
     private String email;
     private String password;
 
+    // ARTICLES
+    @OneToMany(mappedBy = "user", cascade = CascadeType.ALL, orphanRemoval = true)
+
+    private List<Article> articleList = new ArrayList<>();
+
+    public void addArticle(Article article) {
+        articleList.add( article );
+        article.setUser( this );
+    }
+
+    public void removeArticle(Article article) {
+        articleList.remove( article );
+        article.setUser( null );
+    }
+
+    // ROLES
     @ManyToMany(cascade = {CascadeType.PERSIST, CascadeType.MERGE})
     @JoinTable(name = "users_roles",
             joinColumns = @JoinColumn(name = "users_id"),

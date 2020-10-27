@@ -23,7 +23,7 @@ public class HelloWorldController {
     @GetMapping("/hello")
     public String hello(Model model) {
         createUsersList(model);
-        return "hello";
+        return "start";
     }
 
     @PostMapping("/hello")
@@ -34,6 +34,7 @@ public class HelloWorldController {
     }
 
     private void createUsersList(Model model) {
+        System.out.println("asda");
         List<String> usersWhoRegister = userService.getAllUsers().stream().map(User::getEmail).collect(Collectors.toList());
         model.addAttribute("usersList", usersWhoRegister);
     }

@@ -5,13 +5,32 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+          integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>BLOG</title>
 </head>
 <style>
-    .form-group,table{
-        margin:0 25% 0 25%;
-        width:50%;
+    .mb-3 {
+        width: 20%;
+        float: left;
+        clear: left;
+    }
+
+    .form-group {
+        width: 65%;
+        float: right;
+    }
+
+    .table {
+        width: 20%;
+        clear: left;
+    }
+
+    .btn {
+        margin: 5px 0 5px 0;
+        position: relative;
+        left: 50%;
+        transform: translate(-50%, 0);
     }
 
 </style>
@@ -22,13 +41,12 @@
     <div class="mb-3">
         <label for="exampleInputEmail1" class="form-label">Почта</label>
         <input type="email" name="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
-        <div id="emailHelp" class="form-text">Твоя почта сразу попадет в список</div>
     </div>
     <div class="mb-3">
         <label for="exampleInputPassword1" class="form-label">Пароль</label>
         <input type="password" name="password" class="form-control" id="exampleInputPassword1">
+        <button type="submit" class="btn btn-primary">Регистрация</button>
     </div>
-    <button type="submit" class="btn btn-primary" >Submit</button>
 </form>
 
 <form>
@@ -40,26 +58,34 @@
 </form>
 
 
-<table class="table">
-    <thead>
-    <tr>
-        <th scope="col">Последние зарегистрированные пользователи</th>
-    </tr>
-    </thead>
-    <tbody>
-    <#list usersList as x>
-    <tr>
-        <td>${x}</td>
-    </tr>
-    </#list>
-    </tbody>
-</table>
+<div>
+    <table class="table">
+        <thead>
+        <tr>
+            <th scope="col">Последние зарегистрированные пользователи</th>
+        </tr>
+        </thead>
+        <tbody>
+        <#list usersList as x>
+            <tr>
+                <td>${x}</td>
+            </tr>
+        </#list>
+        </tbody>
+    </table>
+</div>
 
 
 <!-- Optional JavaScript -->
 <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
 </body>
 </html>

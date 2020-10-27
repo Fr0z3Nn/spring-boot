@@ -2,6 +2,7 @@ package ru.project.springboot.services;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import ru.project.springboot.models.Article;
 import ru.project.springboot.models.User;
 import ru.project.springboot.repositories.UserRepository;
 
