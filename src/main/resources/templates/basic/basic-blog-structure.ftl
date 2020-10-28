@@ -34,11 +34,12 @@
                             class="navbar-toggler-icon"></span></button>
                 <div
                         class="collapse navbar-collapse" id="navcol-1">
-                    <ul class="nav navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" href="#">Статьи</a></li>
-                        <li class="nav-item"></li>
-                        <li class="nav-item"></li>
-                    </ul>
+                    <form action="/article" method="get">
+                        <button class="btn btn-danger" type="submit"
+                                style="border: none;width: 50px;height: 30px;margin-left: 14px;background-color: #4bc4e0;font-size: 14px;opacity: 1;filter: brightness(98%) grayscale(64%);border-radius: 5px;text-align: center;font-family: Bungee, cursive;">
+                            ARTICLES
+                        </button>
+                    </form>
                     <form action="/statistics" method="get">
                         <button class="btn btn-danger" type="submit"
                                 style="border: none;width: 50px;height: 30px;margin-left: 14px;background-color: #4bc4e0;font-size: 14px;opacity: 1;filter: brightness(98%) grayscale(64%);border-radius: 5px;text-align: center;font-family: Bungee, cursive;">

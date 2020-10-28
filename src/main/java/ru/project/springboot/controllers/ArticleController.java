@@ -12,6 +12,9 @@ import ru.project.springboot.models.Article;
 import ru.project.springboot.models.User;
 import ru.project.springboot.services.ArticleService;
 
+import java.util.ArrayList;
+import java.util.List;
+
 /**
  * Контроллер Статей, котороый позволяет взаимодействовать с ними,
  * осуществлять поиск, добавление и тд, с дальнейшей передачей на фронт.
@@ -38,6 +41,13 @@ public class ArticleController {
         Article article = articleService.getArticleById(id);
         model.addAttribute("articleOnly",article);
         return "article";
+    }
+
+    @GetMapping("/article")
+    public String showListOfArticles(Model model){
+        List<Article> articles = articleService.getAllArticles();
+        model.addAttribute("allArticles", articles);
+        return "allArticles";
     }
 }
 
