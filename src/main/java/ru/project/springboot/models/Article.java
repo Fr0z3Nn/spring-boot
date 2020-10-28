@@ -19,6 +19,7 @@ public class Article {
     private String name;
     private String shortText;
     private String text;
+    private String dateOfCreate;
 
     @ManyToOne
     private User user;
