@@ -3,6 +3,7 @@
 🐸the first project on Spring boot I might finish🐸    
 ***
 ## Stacks
+Backend:
 - OpenJDK 8
 - Spring Boot
 - Spring Data
@@ -10,4 +11,9 @@
 - Mapstruct
 - Lombok
 - Gradle
+Frontend (template made Bootstrap Studio):
+- HTML
+- CSS(Bootstrap)
+- JS
+- Freemarker
 ***
