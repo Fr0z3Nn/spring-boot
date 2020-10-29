@@ -7,7 +7,9 @@
 - OpenJDK 8
 - Spring Boot
 - Spring Data
+- Spring Security
 - PostgreSQL 13
+- Hibernate
 - Mapstruct
 - Lombok
 - Gradle    
